@@ -1,10 +1,10 @@
 ---
-title: "Dr. Jane Doe"
-role: "Principal Investigator"
+title: "Sabrina Hörmann"
+role: "PhD student"
 order: 1
 featured: true
-bio: "Associate Professor in Computer Science and Applied Physics."
-email: "jane.doe@example.edu"
+bio: "PhD student - knee joint modeling"
+email: "s.hoermann@tudelft.nl"
 website: ""
 github: ""
 scholar: ""
@@ -18,4 +18,4 @@ education:
   - "Ph.D. in Applied Physics — University Name"
   - "M.Sc. in Computer Science — University Name"
 ---
-Jane Doe leads the research lab. Her background includes post-doctoral work at leading institutes focusing on complex dynamic systems.
+Research intereset: Estimation of knee joint forces for early-stage knee OA patients. 
