@@ -1,0 +1,8 @@
+<article class="project-item">
+  {% if include.project.image != blank %}<a href="{{ include.project.url | relative_url }}"><img class="content-image" src="{{ include.project.image | relative_url }}" alt="{{ include.project.title | escape }}"></a>{% endif %}
+  <h2><a href="{{ include.project.url | relative_url }}">{{ include.project.title | escape }}</a></h2>
+  {% if include.project.status %}<p><strong>Status:</strong> {{ include.project.status | escape }}</p>{% endif %}
+  {% assign summary = include.project.description | default: include.project.excerpt %}
+  {% if summary %}<p>{{ summary | escape }}</p>{% endif %}
+  {% if include.project.lead %}<p><strong>Lead:</strong> {{ include.project.lead | escape }}</p>{% endif %}
+</article>

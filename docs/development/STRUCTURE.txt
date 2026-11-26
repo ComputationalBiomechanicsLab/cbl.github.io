@@ -1,0 +1,21 @@
+clb-website/
+├── _config.yml
+├── Gemfile
+├── _includes/             # Shared header, navigation, and footer
+├── _layouts/              # Default shell and content-type layouts
+├── _members/              # Member collection documents
+├── _posts/                # Date-prefixed Jekyll blog posts
+├── _projects/             # Project collection documents
+├── _resources/            # Resource collection documents
+├── assets/css/            # Site stylesheet
+├── docs/
+│   ├── agents/            # Existing agent workflow notes
+│   ├── development/       # Architecture and development documentation
+│   └── templates/         # Contributor templates (not published)
+├── about.md
+├── blog.md
+├── index.md
+├── members.md
+├── projects.md
+├── resources.md
+└── README.md

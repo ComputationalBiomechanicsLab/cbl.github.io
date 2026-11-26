@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="post">
+  <h1>{{ page.title | escape }}</h1>
+  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.author %} · {{ page.author | escape }}{% endif %}</p>
+  {% if page.image != blank %}<img class="content-image post-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">{% endif %}
+  {% if page.description %}<p class="post-summary">{{ page.description | escape }}</p>{% endif %}
+  {% if page.categories and page.categories.size > 0 %}<p class="taxonomy"><strong>Categories:</strong> {{ page.categories | join: ", " | escape }}</p>{% endif %}
+  {% if page.tags and page.tags.size > 0 %}<p class="taxonomy"><strong>Tags:</strong> {{ page.tags | join: ", " | escape }}</p>{% endif %}
+  <div class="post-content">{{ content }}</div>
+</article>

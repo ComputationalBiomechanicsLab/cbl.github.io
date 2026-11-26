@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="resource">
+  <h1>{{ page.name | default: page.title | escape }}</h1>
+  {% if page.image != blank %}<img class="content-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">{% endif %}
+  {% if page.description %}<p class="resource-summary">{{ page.description | escape }}</p>{% endif %}
+  <dl class="content-metadata">
+    {% if page.category %}<dt>Category</dt><dd>{{ page.category | escape }}</dd>{% endif %}
+    {% if page.type %}<dt>Type</dt><dd>{{ page.type | escape }}</dd>{% endif %}
+    {% if page.version %}<dt>Version</dt><dd>{{ page.version | escape }}</dd>{% endif %}
+    {% if page.date %}<dt>Date</dt><dd>{{ page.date | date: "%B %d, %Y" }}</dd>{% endif %}
+  </dl>
+  {% if page.link != blank or page.paper_link != blank %}<p class="resource-links">{% if page.link and page.link != blank %}<a href="{{ page.link | escape }}" target="_blank" rel="noopener noreferrer">Access resource</a>{% endif %}{% if page.paper_link and page.paper_link != blank %}{% if page.link and page.link != blank %} · {% endif %}<a href="{{ page.paper_link | escape }}" target="_blank" rel="noopener noreferrer">Related publication</a>{% endif %}</p>{% endif %}
+  {% if page.citation %}<section><h2>Citation</h2><p>{{ page.citation | escape }}</p></section>{% endif %}
+  {% if page.tags and page.tags.size > 0 %}<p class="taxonomy"><strong>Tags:</strong> {{ page.tags | join: ", " | escape }}</p>{% endif %}
+  <div class="resource-content">{{ content }}</div>
+</article>

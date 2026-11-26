@@ -1,0 +1,8 @@
+<article class="member-card">
+  {% assign portrait = include.member.avatar %}{% if portrait == blank %}{% assign portrait = include.member.image %}{% endif %}
+  {% if portrait != blank %}<img class="member-photo" src="{{ portrait | relative_url }}" alt="Portrait of {{ include.member.title | escape }}">{% endif %}
+  <h3><a href="{{ include.member.url | relative_url }}">{{ include.member.title | escape }}</a></h3>
+  {% if include.member.role %}<p class="member-role">{{ include.member.role | escape }}</p>{% endif %}
+  {% assign summary = include.member.bio | default: include.member.description %}
+  {% if summary %}<p><small>{{ summary | escape }}</small></p>{% endif %}
+</article>

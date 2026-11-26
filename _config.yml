@@ -1,0 +1,46 @@
+title: "Your Club / Organization Name"
+email: "your-email@example.com"
+description: "Brief description of what your group does."
+baseurl: "" # Set to the repository subpath for a GitHub Pages project site.
+url: "https://yourdomain.com" # Set to the deployed site's origin.
+
+markdown: kramdown
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  members:
+    output: true
+    permalink: /members/:name/
+  resources:
+    output: true
+    permalink: /resources/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: members
+    values:
+      layout: member
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: resource
+
+exclude:
+  - docs/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

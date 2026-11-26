@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="project">
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.image != blank %}<img class="content-image project-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">{% endif %}
+  {% if page.description %}<p class="project-summary">{{ page.description | escape }}</p>{% endif %}
+  <dl class="content-metadata">
+    {% if page.status %}<dt>Status</dt><dd>{{ page.status | escape }}</dd>{% endif %}
+    {% if page.start_date != blank %}<dt>Start</dt><dd>{{ page.start_date | date: "%B %Y" }}</dd>{% endif %}
+    {% if page.end_date != blank %}<dt>End</dt><dd>{{ page.end_date | date: "%B %Y" }}</dd>{% endif %}
+    {% if page.lead %}<dt>Project lead</dt><dd>{{ page.lead | escape }}</dd>{% endif %}
+  </dl>
+  {% assign collaborators = page.collaborators | default: page.team %}
+  {% if collaborators and collaborators.size > 0 %}<section><h2>Collaborators</h2><ul>{% for person in collaborators %}<li>{{ person | escape }}</li>{% endfor %}</ul></section>{% endif %}
+  {% if page.github != blank or page.website != blank %}<p class="project-links">{% if page.github and page.github != blank %}<a href="{{ page.github | escape }}" target="_blank" rel="noopener noreferrer">GitHub</a>{% endif %}{% if page.website and page.website != blank %}{% if page.github and page.github != blank %} · {% endif %}<a href="{{ page.website | escape }}" target="_blank" rel="noopener noreferrer">Project website</a>{% endif %}</p>{% endif %}
+  {% if page.tags and page.tags.size > 0 %}<p class="taxonomy"><strong>Topics:</strong> {{ page.tags | join: ", " | escape }}</p>{% endif %}
+  <div class="project-content">{{ content }}</div>
+</article>

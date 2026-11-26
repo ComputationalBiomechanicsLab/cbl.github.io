@@ -1,0 +1,6 @@
+<article class="resource-item">
+  <h3><a href="{{ include.resource.url | relative_url }}">{{ include.resource.name | default: include.resource.title | escape }}</a></h3>
+  {% if include.resource.type %}<p><strong>Type:</strong> {{ include.resource.type | escape }}</p>{% endif %}
+  {% if include.resource.description %}<p>{{ include.resource.description | escape }}</p>{% endif %}
+  {% if include.resource.link != blank %}<p><a href="{{ include.resource.link | escape }}" target="_blank" rel="noopener noreferrer">External resource</a></p>{% endif %}
+</article>

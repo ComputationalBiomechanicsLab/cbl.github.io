@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="member">
+  <h1>{{ page.title | escape }}</h1>
+  {% assign portrait = page.avatar %}{% if portrait == blank %}{% assign portrait = page.image %}{% endif %}
+  {% if portrait and portrait != empty %}<img class="member-photo member-photo-large" src="{{ portrait | relative_url }}" alt="Portrait of {{ page.title | escape }}">{% endif %}
+  {% if page.role %}<p class="member-role">{{ page.role | escape }}</p>{% endif %}
+  {% if page.email != blank %}<p><strong>Email:</strong> <a href="mailto:{{ page.email | escape }}">{{ page.email | escape }}</a></p>{% endif %}
+  {% if page.website != blank or page.github != blank or page.scholar != blank or page.linkedin != blank or page.orcid != blank or page.twitter != blank %}
+  <ul class="profile-links">
+    {% if page.website and page.website != blank %}<li><a href="{{ page.website | escape }}" target="_blank" rel="noopener noreferrer">Personal website</a></li>{% endif %}
+    {% if page.github and page.github != blank %}<li><a href="{% if page.github contains '://' %}{{ page.github | escape }}{% else %}https://github.com/{{ page.github | escape }}{% endif %}" target="_blank" rel="noopener noreferrer">GitHub</a></li>{% endif %}
+    {% if page.scholar and page.scholar != blank %}<li><a href="{% if page.scholar contains '://' %}{{ page.scholar | escape }}{% else %}https://scholar.google.com/citations?user={{ page.scholar | escape }}{% endif %}" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>{% endif %}
+    {% if page.linkedin and page.linkedin != blank %}<li><a href="{{ page.linkedin | escape }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>{% endif %}
+    {% if page.orcid and page.orcid != blank %}<li><a href="{% if page.orcid contains '://' %}{{ page.orcid | escape }}{% else %}https://orcid.org/{{ page.orcid | escape }}{% endif %}" target="_blank" rel="noopener noreferrer">ORCID</a></li>{% endif %}
+    {% if page.twitter and page.twitter != blank %}<li><a href="{% if page.twitter contains '://' %}{{ page.twitter | escape }}{% else %}https://twitter.com/{{ page.twitter | remove_first: '@' | escape }}{% endif %}" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>{% endif %}
+  </ul>{% endif %}
+  {% if page.research_interests and page.research_interests.size > 0 %}<section><h2>Research interests</h2><ul>{% for interest in page.research_interests %}<li>{{ interest | escape }}</li>{% endfor %}</ul></section>{% endif %}
+  {% if page.education and page.education.size > 0 %}<section><h2>Education</h2><ul>{% for item in page.education %}<li>{{ item | escape }}</li>{% endfor %}</ul></section>{% endif %}
+  <div class="member-content">{{ content }}</div>
+</article>
