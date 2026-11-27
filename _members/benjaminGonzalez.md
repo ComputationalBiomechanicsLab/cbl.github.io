@@ -10,7 +10,7 @@ github: "https://github.com/Eimolgon"
 scholar: ""
 linkedin: "https://www.linkedin.com/in/eimolgonzalez/"
 orcid: "https://orcid.org/0000-0001-6132-1367"
-avatar: ""
+avatar: "assets/images/members/headshot-bgonzalez.JPG"
 research_interests:
   - "Vehicle Dynamics"
   - "Crash analysis"
