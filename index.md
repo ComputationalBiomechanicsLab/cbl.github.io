@@ -3,8 +3,8 @@ layout: page
 title: Home
 hide_title: true
 ---
-Welcome to the Academic Research Laboratory
-============================================
+Computational Biomechanics Lab
+==============================
 
 We explore fundamental challenges in computational science, data analysis, and advanced engineering systems. Our group is dedicated to open science, collaborative mentorship, and impactful publications.
 

@@ -1,4 +1,4 @@
-# Academic Research Laboratory Website
+# Computational Biomechanics Lab
 
 This website is built with **Jekyll** and is intended for deployment through **GitHub Pages**. Content is authored in Markdown and stored in Jekyll pages, posts, and collections.
 

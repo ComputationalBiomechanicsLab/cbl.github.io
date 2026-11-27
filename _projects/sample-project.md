@@ -1,19 +1,24 @@
 ---
-title: "High-Precision Quantum Sensors"
+title: "Single-cyclist crash classification"
 status: "Active"
-description: "Research into room-temperature quantum sensors for measuring minute physical fluctuations."
+description: "."
 order: 1
 featured: true
-start_date: 2025-01
+start_date: 2024-11
 end_date:
-lead: "Dr. Jane Doe"
+lead: "Benjamín González"
 collaborators:
-  - "Research collaborators to be confirmed"
+  - "Ajay Seth"
+  - "Jason K. Moore"
+  - "Alfred Schouten"
 image: ""
 github: ""
 website: ""
 tags:
-  - quantum sensors
-  - measurement science
+  - 
+  - 
 ---
-This project investigates novel designs for room-temperature quantum sensors to measure minute physical fluctuations with ultra-high fidelity. Funded by national research grants.
+
+A sequential single-cyclist crash classification
+
+

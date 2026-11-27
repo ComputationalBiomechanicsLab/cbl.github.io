@@ -3,7 +3,7 @@ layout: page
 title: Our Members
 permalink: /members/
 ---
-Meet the people behind our organization.
+Meet the members of our lab.
 
 <div class="members-grid">
   {% assign sorted_members = site.members | sort: "order" %}

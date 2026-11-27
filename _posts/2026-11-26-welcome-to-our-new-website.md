@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to Our New Website"
-date: 2026-06-01 09:00:00 -0500
+date: 2026-06-01
 author: "Research Group"
 categories: [News]
 tags: [website, research]

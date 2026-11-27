@@ -1,8 +1,8 @@
-title: "Your Club / Organization Name"
+title: "Computational Biomechanics Lab"
 email: "your-email@example.com"
-description: "Brief description of what your group does."
+description: "Musculoskeletal modeling and simulation"
 baseurl: "" # Set to the repository subpath for a GitHub Pages project site.
-url: "https://yourdomain.com" # Set to the deployed site's origin.
+url: "https://computationalbiomechanicslab.github.io/cbl.github.io/" # Set to the deployed site's origin.
 
 markdown: kramdown
 collections:
